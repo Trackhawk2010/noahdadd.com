@@ -1,0 +1,231 @@
+<!doctype html>
+<!-- INFO1005 Website Design — Assessment 3 Portfolio | Noah Dadd | built from the Maggie Simpson (Module 3.1) template -->
+<html lang="en-AU" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Noah Dadd: athletic results, work experience, education and skills.">
+  <meta name="author" content="Noah Dadd">
+  <title>Resume | Noah Dadd</title>
+
+  <!-- FAVICON — created with Favicon.io, stored in /favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- GOOGLE FONTS — Oswald (headings, condensed and athletic) + Montserrat (body, clean and readable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS — social media and contact icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- BOOTSTRAP 5.3 — grid, navbar, modal, carousel -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CUSTOM CSS — loads last so it overrides Bootstrap -->
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVIGATION — fixed-top (sticky) navbar; collapses to a hamburger menu below 992px -->
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html" aria-label="Noah Dadd home">
+      <img src="images/nd-monogram.png" alt="Noah Dadd ND monogram" class="brand-icon rounded-circle">
+      <span class="d-none d-sm-inline">Noah Dadd</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="pdf/noahdadd-resume-2026.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> PDF Resume</a></li>
+      </ul>
+
+      <!-- DARK MODE SWITCH — Bootstrap colour modes -->
+      <div class="form-check form-switch theme-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" aria-label="Toggle dark mode">
+        <label class="form-check-label" for="themeSwitch">Dark</label>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- PAGE HEADER -->
+  <header class="container page-header">
+    <p class="eyebrow">Resume</p>
+    <h1>Experience &amp; results</h1>
+    <p class="lead-copy">Australian sprinter targeting a professional athlete and brand ambassador career.</p>
+  </header>
+
+  <section class="container pb-2">
+    <a class="btn btn-brand" href="pdf/noahdadd-resume-2026.pdf" target="_blank" rel="noopener"><i class="bi bi-download" aria-hidden="true"></i> Download PDF resume</a>
+  </section>
+
+  <section class="container section-block">
+    <div class="row g-4">
+
+      <!-- LEFT COLUMN — athletics + work experience timelines -->
+      <div class="col-12 col-lg-8">
+
+        <h2 id="athletics">Athletic career</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Sprinter, 100m / 200m</h3>
+            <h4>Project Elite Track Squad · Coach Rob</h4>
+            <p class="timeline-date">2025 – Present</p>
+            <ul>
+              <li>100m PB 10.38, 60m PB 6.72, 200m 21.6</li>
+              <li>Won in Kasugai, Japan (10.55)</li>
+              <li>6th fastest in the 100m, 2026 NSW State Championships</li>
+              <li>2027 targets: 10.2 / 20.8, a national final, Australian relay selection</li>
+            </ul>
+          </article>
+        </div>
+
+        <h2 id="experience" class="mt-5">Work experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Sales Specialist</h3>
+            <h4>Nike · Macarthur Square</h4>
+            <p class="timeline-date">Apr 2025 – Present</p>
+            <ul>
+              <li>Help customers choose performance footwear and apparel</li>
+              <li>Bring athlete knowledge of running gear to the sales floor</li>
+              <li>Work rostered shifts in a fast-paced retail team</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Trackside Commentator</h3>
+            <h4>Athletics NSW</h4>
+            <p class="timeline-date">Mar 2026</p>
+            <ul>
+              <li>Called races live for the crowd</li>
+              <li>Interviewed athletes and spectators</li>
+              <li>Created live social media content during the meet</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Content Creator &amp; Founder</h3>
+            <h4>@trackhawk2010 · Trackhawk apparel</h4>
+            <p class="timeline-date">2025 – Present</p>
+            <ul>
+              <li>Post 5–7 short-form videos a week across four content pillars</li>
+              <li>Film and edit in CapCut; appeared on track podcasts</li>
+              <li>Designed the Trackhawk logo and Drop 001 apparel in Adobe Illustrator</li>
+            </ul>
+          </article>
+        </div>
+
+        <h2 id="education" class="mt-5">Education</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Diploma of Business</h3>
+            <h4>Western Sydney University The College</h4>
+            <p class="timeline-date">2025 – 2027 (expected)</p>
+            <ul>
+              <li>Units in sport business, management, marketing and website design</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Higher School Certificate</h3>
+            <h4>Leumeah High School</h4>
+            <p class="timeline-date">2023</p>
+            <ul>
+              <li>Mentors and teachers who shaped my work ethic</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN — photo + skills -->
+      <aside class="col-12 col-lg-4">
+        <div>
+          <img src="images/resume-noah.jpg" class="img-fluid resume-photo d-none d-md-block" alt="Noah Dadd in a navy pinstripe suit">
+
+          <h2 class="h3 mt-4" id="skills">Skills</h2>
+          <ul class="skill-tags">
+            <li>Sprinting 100m / 200m</li>
+            <li>On-camera presenting</li>
+            <li>Live commentary</li>
+            <li>Short-form video</li>
+            <li>Customer service</li>
+            <li>Sales</li>
+            <li>Brand design</li>
+            <li>HTML, CSS &amp; Bootstrap</li>
+          </ul>
+
+          <h2 class="h3 mt-4">Software</h2>
+          <ul class="skill-tags">
+            <li>CapCut</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Express</li>
+            <li>VS Code</li>
+          </ul>
+
+          <h2 class="h3 mt-4">Upcoming races</h2>
+          <ul class="race-list">
+            <li>Sydney Track Classic</li>
+            <li>Wollongong Track Challenge</li>
+            <li>NSW State Championships</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER — repeated on every page: quick links + social media -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-md-5">
+        <p class="footer-name">Noah Dadd</p>
+        <p>Australian sprinter &amp; content creator · Campbelltown, Western Sydney</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 text-md-end">
+        <p class="social-links">
+          <a href="https://www.tiktok.com/@trackhawk2010" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.instagram.com/noahdadd__" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/noahdadd1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:daddnoah@gmail.com" aria-label="Email Noah"><i class="bi bi-envelope"></i></a>
+        </p>
+      </div>
+    </div>
+    <p class="footer-legal">&copy; 2026 Noah Dadd. Student project for INFO1005 Website Design, Western Sydney University The College.</p>
+  </div>
+</footer>
+
+<!-- BOOTSTRAP JS — powers the navbar collapse, modal and carousel -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CUSTOM JS — dark mode and lightbox -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

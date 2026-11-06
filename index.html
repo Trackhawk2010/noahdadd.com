@@ -1,0 +1,225 @@
+<!doctype html>
+<!-- INFO1005 Website Design — Assessment 3 Portfolio | Noah Dadd | built from the Maggie Simpson (Module 3.1) template -->
+<html lang="en-AU" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Noah Dadd is an Australian 100m and 200m sprinter and content creator from Campbelltown, Western Sydney, building a career as a professional athlete and brand ambassador.">
+  <meta name="author" content="Noah Dadd">
+  <title>Noah Dadd | Australian Sprinter & Brand Ambassador</title>
+
+  <!-- FAVICON — created with Favicon.io, stored in /favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- GOOGLE FONTS — Oswald (headings, condensed and athletic) + Montserrat (body, clean and readable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS — social media and contact icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- BOOTSTRAP 5.3 — grid, navbar, modal, carousel -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CUSTOM CSS — loads last so it overrides Bootstrap -->
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVIGATION — fixed-top (sticky) navbar; collapses to a hamburger menu below 992px -->
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html" aria-label="Noah Dadd home">
+      <img src="images/nd-monogram.png" alt="Noah Dadd ND monogram" class="brand-icon rounded-circle">
+      <span class="d-none d-sm-inline">Noah Dadd</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="pdf/noahdadd-resume-2026.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> PDF Resume</a></li>
+      </ul>
+
+      <!-- DARK MODE SWITCH — Bootstrap colour modes -->
+      <div class="form-check form-switch theme-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" aria-label="Toggle dark mode">
+        <label class="form-check-label" for="themeSwitch">Dark</label>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO — 7/5 split on desktop, stacked on phone -->
+  <header class="container hero-section">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-lg-7">
+        <p class="eyebrow">Sprinter · Content creator · Campbelltown, NSW</p>
+        <h1>Noah Dadd</h1>
+        <p class="lead-copy">Australian 100m and 200m sprinter on the rise, building a career as a professional athlete and brand ambassador.</p>
+        <p class="d-none d-md-block">From an 11.99 at my first All Schools to a 10.38 two seasons later, I share the real side of elite sprinting and make athletics more fun to follow.</p>
+
+        <!-- PB STATS -->
+        <ul class="stat-row">
+          <li><span class="stat-num">10.38</span><span class="stat-label">100m PB</span></li>
+          <li><span class="stat-num">6.72</span><span class="stat-label">60m PB</span></li>
+          <li><span class="stat-num">21.6</span><span class="stat-label">200m</span></li>
+        </ul>
+
+        <div class="hero-actions">
+          <a class="btn btn-brand" href="portfolio.html">View portfolio</a>
+          <a class="btn btn-ghost" href="pdf/noahdadd-resume-2026.pdf" target="_blank" rel="noopener"><i class="bi bi-download" aria-hidden="true"></i> Download resume</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5 text-center">
+        <img src="images/hero-noah.jpg" class="img-fluid hero-img" alt="Noah Dadd under stadium floodlights in a black race suit">
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT ME — cards: 1 column phone, 2 tablet, 3 desktop -->
+  <section class="container section-block" id="aboutme">
+    <div class="section-intro">
+      <p class="eyebrow">About me</p>
+      <h2>Fast, and getting faster</h2>
+      <p>Western Sydney born and raised, chasing big times on the track and building a brand off it.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <article class="card h-100 feature-card">
+          <img src="images/about-intro.jpg" class="card-img-top" alt="Noah Dadd set in the blocks in Nike Maxfly spikes">
+          <div class="card-body">
+            <h3 class="card-title">My story</h3>
+            <p class="card-text">I did Little Athletics as a jumper and was told I wasn't fast enough to sprint. At 17 I ran 11.9 in <span class="standout">Crocs</span> at my school carnival and took it up with my best mate, Ronald.</p>
+            <p class="card-text d-none d-lg-block">Now I train with Project Elite Track Squad under Coach Rob.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 feature-card">
+          <img src="images/about-track.jpg" class="card-img-top" alt="Noah Dadd sprinting at the 2026 Opens Championships">
+          <div class="card-body">
+            <h3 class="card-title">On the track</h3>
+            <p class="card-text">The 100m is my event. Top-end speed is my strength; the first 60m is what I'm sharpening.</p>
+            <!-- GOAL METERS — progress toward 2027 targets -->
+            <div class="skill-meter"><span style="width:85%">Road to 10.2</span></div>
+            <div class="skill-meter"><span style="width:70%">Road to 20.8</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col d-none d-md-block">
+        <article class="card h-100 feature-card">
+          <img src="images/about-offtrack.jpg" class="card-img-top" alt="Noah Dadd in a navy suit and floral tie">
+          <div class="card-body">
+            <h3 class="card-title">Off the track</h3>
+            <p class="card-text">Studying <span class="standout">business at Western Sydney University</span>, working at Nike and building my apparel brand, Trackhawk.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO BANNER — background image with a dark overlay -->
+  <section class="photo-banner" aria-label="Motto">
+    <div class="container">
+      <p class="banner-quote">"Told I wasn't fast enough. Ran 10.38 anyway."</p>
+      <a class="btn btn-brand" href="resume.html">See my resume</a>
+    </div>
+  </section>
+
+  <!-- JOURNEY CAROUSEL — desktop only (large-screen enhancement) -->
+  <section class="container section-block d-none d-lg-block" id="journey">
+    <div class="section-intro">
+      <p class="eyebrow">The journey</p>
+      <h2>Where it started, where it's going</h2>
+    </div>
+
+    <div id="journeyCarousel" class="carousel slide process-carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/journey-2023.jpg" class="d-block w-100" alt="Black and white photo of Noah driving out of the start">
+          <div class="carousel-caption"><h3>2023: The start</h3><p>First official meet at NSW All Schools: 11.99 (100m) and 24.28 (200m).</p></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/journey-2025.jpg" class="d-block w-100" alt="Noah crossing the finish line with his arm raised">
+          <div class="carousel-caption"><h3>2025/26: The breakthrough</h3><p>New squad and a full off-season: 100m down from 11.15 to 10.38.</p></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/journey-2027.jpg" class="d-block w-100" alt="Noah sprinting down a blue track">
+          <div class="carousel-caption"><h3>2027: What's next</h3><p>10.2 / 20.8, a national final and Australian relay selection.</p></div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#journeyCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#journeyCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="container section-block">
+    <div class="cta-panel">
+      <h2>Let's work together</h2>
+      <p>Brands, agents and media: I'd love to hear from you.</p>
+      <a class="btn btn-brand" href="contact.html">Get in touch</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER — repeated on every page: quick links + social media -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-md-5">
+        <p class="footer-name">Noah Dadd</p>
+        <p>Australian sprinter &amp; content creator · Campbelltown, Western Sydney</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 text-md-end">
+        <p class="social-links">
+          <a href="https://www.tiktok.com/@trackhawk2010" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.instagram.com/noahdadd__" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/noahdadd1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:daddnoah@gmail.com" aria-label="Email Noah"><i class="bi bi-envelope"></i></a>
+        </p>
+      </div>
+    </div>
+    <p class="footer-legal">&copy; 2026 Noah Dadd. Student project for INFO1005 Website Design, Western Sydney University The College.</p>
+  </div>
+</footer>
+
+<!-- BOOTSTRAP JS — powers the navbar collapse, modal and carousel -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CUSTOM JS — dark mode and lightbox -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
