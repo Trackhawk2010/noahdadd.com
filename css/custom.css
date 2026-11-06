@@ -1,0 +1,526 @@
+/* INFO1005 Website Design — Assessment 3 | Noah Dadd custom CSS
+   Colour palette (Adobe Color, complementary harmony):
+   #C2410C track orange (primary) · #111827 ink (accent) · #6B7280 slate (secondary) · #FFF7F2 warm panel
+   Fonts: Oswald (headings) + Montserrat (body) from Google Fonts */
+
+:root {
+  --brand-primary: #c2410c;   /* track orange — 5.2:1 contrast on white (WCAG AA) */
+  --brand-secondary: #6b7280;
+  --brand-accent: #111827;    /* ink */
+  --page-bg: #ffffff;
+  --panel-bg: #fff7f2;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-soft: #4b5563;
+  --border-soft: #f3dccf;
+  --font-body: 'Montserrat', Arial, sans-serif;
+  --font-heading: 'Oswald', Impact, sans-serif;
+}
+
+[data-bs-theme="dark"] {
+  --brand-primary: #ff7a45;
+  --brand-secondary: #9ca3af;
+  --brand-accent: #f3f4f6;
+  --page-bg: #111827;
+  --panel-bg: #1f2937;
+  --card-bg: #172033;
+  --text-main: #f3f4f6;
+  --text-soft: #d1d5db;
+  --border-soft: #374151;
+}
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--page-bg);
+  color: var(--text-main);
+}
+
+/* DARK MODE — dark text on the lighter orange keeps buttons readable (6.9:1 contrast) */
+[data-bs-theme="dark"] .btn-brand,
+[data-bs-theme="dark"] .skill-meter span {
+  color: #111827;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  color: var(--brand-primary);
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: .95;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p, li, a, label, input, textarea, button {
+  font-family: var(--font-body);
+}
+
+p, li, label {
+  color: var(--text-soft);
+}
+
+.site-nav {
+  background-color: var(--page-bg);
+  border-bottom: 3px solid var(--brand-primary);
+}
+
+.navbar-brand,
+.nav-link,
+.theme-switch label {
+  color: var(--text-main);
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: var(--brand-primary);
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: 3px solid var(--brand-primary);
+  margin-right: .5rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.hero-section {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.eyebrow {
+  color: var(--brand-secondary);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.lead-copy {
+  color: var(--text-main);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.hero-img {
+  height: auto;
+  border: 10px solid var(--brand-primary);
+  border-radius: 2rem;
+  box-shadow: 16px 16px 0 var(--brand-accent);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-brand,
+.btn-ghost {
+  border: 2px solid var(--brand-primary);
+  border-radius: 999px;
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+.btn-brand {
+  background-color: var(--brand-primary);
+  color: #ffffff;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+.btn-brand:hover {
+  background-color: var(--brand-accent);
+  border-color: var(--brand-accent);
+  color: var(--page-bg);
+}
+
+.btn-brand:focus-visible,
+.btn-ghost:focus-visible,
+.nav-link:focus-visible,
+.open-lightbox:focus-visible {
+  outline: 4px solid var(--brand-primary);
+  outline-offset: 3px;
+}
+
+.section-block {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 2px solid var(--border-soft);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.feature-card,
+.portfolio-card {
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.feature-card:hover,
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--brand-primary);
+}
+
+.standout {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.skill-meter {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.skill-meter span {
+  display: block;
+  background-color: var(--brand-primary);
+  color: #ffffff;
+  font-weight: 700;
+  padding: .6rem 1rem;
+}
+
+.project-modal {
+  background-color: var(--page-bg);
+  color: var(--text-main);
+  border: 3px solid var(--brand-primary);
+}
+
+.modal-project-img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid var(--border-soft);
+}
+
+.modal-description {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+
+.process-carousel {
+  border: 4px solid var(--brand-primary);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: 430px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(17, 24, 39, .75);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+  color: #ffffff;
+}
+
+.contact-form {
+  background-color: var(--panel-bg);
+  border: 2px solid var(--border-soft);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.form-control {
+  background-color: var(--page-bg);
+  color: var(--text-main);
+  border: 2px solid var(--border-soft);
+}
+
+.form-control:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 .2rem rgba(194, 65, 12, .25);
+}
+
+.site-footer {
+  background-color: var(--panel-bg);
+  border-top: 3px solid var(--brand-primary);
+  padding: 2rem 0;
+}
+
+.social-links a {
+  color: var(--text-main);
+  font-size: 1.6rem;
+  margin-left: .8rem;
+}
+
+.social-links a:hover {
+  color: var(--brand-primary);
+}
+
+/* HERO STATS — PB numbers */
+.stat-row,
+.skill-tags,
+.footer-links,
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-row li {
+  background-color: var(--panel-bg);
+  border: 2px solid var(--border-soft);
+  border-radius: 1rem;
+  padding: .75rem 1.25rem;
+}
+
+.stat-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+
+.carousel-item img {
+  filter: brightness(.85);
+}
+
+/* ---------- ACTIVE NAV LINK ---------- */
+.site-nav .nav-link.active {
+  color: var(--brand-primary);
+  font-weight: 700;
+  border-bottom: 3px solid var(--brand-primary);
+}
+
+/* ---------- INNER PAGE HEADERS ---------- */
+.page-header {
+  padding-top: 8rem;
+  padding-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- PHOTO BANNER (home) — background image pattern from Module 2.3 ---------- */
+.photo-banner {
+  background-image: linear-gradient(rgba(17, 24, 39, .6), rgba(17, 24, 39, .6)), url("../images/banner-track.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 7rem 0;
+  text-align: center;
+}
+
+.banner-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- CALL TO ACTION PANEL ---------- */
+.cta-panel {
+  background-color: var(--panel-bg);
+  border: 2px solid var(--border-soft);
+  border-left: 8px solid var(--brand-primary);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+
+
+
+/* ---------- RESUME TIMELINE ---------- */
+
+.timeline-item {
+  border-left: 6px solid var(--brand-primary);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.timeline-item h3 {
+  font-size: 1.4rem;
+}
+
+.timeline-date {
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--brand-secondary);
+  margin-bottom: .2rem;
+}
+
+.timeline-item h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.resume-photo,
+.contact-photo {
+  height: auto;
+  border-radius: 1.5rem;
+  border: 4px solid var(--brand-primary);
+}
+
+.contact-photo {
+  margin-top: 2rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.skill-tags li {
+  background-color: var(--panel-bg);
+  border: 2px solid var(--border-soft);
+  border-radius: 999px;
+  padding: .35rem .9rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ---------- CONTACT LIST ---------- */
+.contact-list li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-list i {
+  color: var(--brand-primary);
+  font-size: 1.3rem;
+  margin-right: .6rem;
+}
+
+.contact-list a,
+.footer-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-list a:hover,
+.footer-links a:hover {
+  color: var(--brand-primary);
+  text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+.footer-name {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--brand-primary);
+  margin-bottom: .3rem;
+}
+
+.footer-links li {
+  margin-bottom: .4rem;
+}
+
+.footer-legal {
+  font-size: .85rem;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+/* ---------- TABLET AND BELOW ---------- */
+@media (max-width: 991.98px) {
+  .photo-banner {
+    padding: 4rem 0;
+  }
+}
+
+/* ---------- PHONE ---------- */
+@media (max-width: 575.98px) {
+  .page-header {
+    padding-top: 7rem;
+  }
+
+  .cta-panel {
+    padding: 1.5rem;
+  }
+
+  .stat-row li {
+    padding: .6rem .75rem;
+  }
+
+  .stat-num {
+    font-size: 1.6rem;
+  }
+
+  .hero-section {
+    padding-top: 7rem;
+  }
+
+  .hero-img {
+    box-shadow: 8px 8px 0 var(--brand-accent);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
